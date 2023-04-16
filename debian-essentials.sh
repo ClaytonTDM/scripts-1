@@ -79,7 +79,7 @@ echo "Done! Please wait..."
 
 ) |
 zenity --progress \
-  --title="Mint Essentials" \
+  --title="Debian Essentials" \
   --text="Preparing..." \
   --percentage=0 \
   --auto-close \

@@ -6,3 +6,7 @@ curl https://raw.githubusercontent.com/Xytrux/scripts/main/debian-essentials.sh 
 
 ## Windows Essentials
 work in progress...
+
+<hr>
+
+This repository includes code created by [ClaytonTDM](https://github.com/claytontdm) under the Eclipse Public License 2.0

@@ -4,6 +4,7 @@ sudo echo "sudo";
 sudo apt install zenity -y > /dev/null;
 (
 # =================================================================
+echo "9.09"
 echo "# Installing Brave Browser..."
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg;
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list;
@@ -11,6 +12,7 @@ sudo apt-get update > /dev/null;
 sudo apt-get install brave-browser -y > /dev/null;
 
 # =================================================================
+echo "18.18"
 echo "# Installing GrapeJuice..."
 curl -s https://gitlab.com/brinkervii/grapejuice/-/raw/master/ci_scripts/signing_keys/public_key.gpg | sudo tee /usr/share/keyrings/grapejuice-archive-keyring.gpg  > /dev/null;
 sudo tee /etc/apt/sources.list.d/grapejuice.list <<< 'deb [signed-by=/usr/share/keyrings/grapejuice-archive-keyring.gpg] https://brinkervii.gitlab.io/grapejuice/repositories/debian/ universal main';
@@ -18,6 +20,7 @@ sudo apt-get update > /dev/null;
 sudo apt-get install grapejuice -y > /dev/null;
 
 # =================================================================
+echo "27.27"
 echo "# Installing Wine..."
 sudo mkdir -pm755 /etc/apt/keyrings > /dev/null;
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key > /dev/null;
@@ -26,6 +29,7 @@ sudo apt-get update > /dev/null;
 sudo apt-get install --install-recommends winehq-stable -y > /dev/null;
 
 # =================================================================
+echo "36.36"
 echo "# Installing QEMU..."
 sudo apt install qemu-kvm virt-manager virtinst libvirt-clients bridge-utils libvirt-daemon-system -y > /dev/null;
 sudo systemctl enable --now libvirtd > /dev/null;
@@ -34,34 +38,41 @@ sudo usermod -aG kvm $USER > /dev/null;
 sudo usermod -aG libvirt $USER > /dev/null;
 
 # =================================================================
+echo "45.45"
 echo "# Installing Git..."
 sudo apt-get install git -y > /dev/null;
 
 # =================================================================
+echo "54.54"
 echo "# Installing Spotify..."
 sudo apt-get install spotify-client -y > /dev/null;
 
 # =================================================================
+echo "63.63"
 echo "# Installing OBS Studio..."
 sudo add-apt-repository ppa:obsproject/obs-studio -y > /dev/null;
 sudo apt update > /dev/null;
 sudo apt install ffmpeg obs-studio -y > /dev/null;
 
 # =================================================================
+echo "72.72"
 echo "# Installing VSCodium..."
 wget https://github.com/VSCodium/vscodium/releases/download/1.77.3.23102/codium_1.77.3.23102_arm64.deb > /dev/null;
 sudo apt-get install ./codium_1.77.2.23101_amd64.deb -y > /dev/null;
 
 # =================================================================
+echo "81.81"
 echo "# Installing Discord..."
 wget https://dl.discordapp.net/apps/linux/0.0.26/discord-0.0.26.deb > /dev/null;
 sudo apt-get install ./discord-0.0.26.deb -y > /dev/null;
 
 # =================================================================
+echo "90.90"
 echo "# Installing Steam..."
 sudo apt-get install steam -y > /dev/null;
 
 # =================================================================
+echo "100.00"
 echo "# Installing BalenaEtcher"
 curl -1sLf \
    'https://dl.cloudsmith.io/public/balena/etcher/setup.deb.sh' \

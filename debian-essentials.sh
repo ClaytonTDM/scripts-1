@@ -1,6 +1,7 @@
 #!/bin/bash
 
-sudo echo "sudo"
+sudo echo "sudo";
+sudo apt install zenity -y > /dev/null;
 (
 # =================================================================
 echo "# Installing Brave Browser..."
@@ -65,8 +66,8 @@ echo "# Installing BalenaEtcher"
 curl -1sLf \
    'https://dl.cloudsmith.io/public/balena/etcher/setup.deb.sh' \
    | sudo -E bash
-sudo apt-get update
-sudo apt-get install balena-etcher-electron
+sudo apt-get update > /dev/null;
+sudo apt-get install balena-etcher-electron > /dev/null;
 # =================================================================
 echo "# Cleaning Up..."
 sudo apt-get install -f > /dev/null;
